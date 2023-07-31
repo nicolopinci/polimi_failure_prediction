@@ -22,3 +22,17 @@ The following table summarizes the meaning of each variable:
 | session_counter | Number of sessions |
 | time_to_failure | Time to the next alert, expressed in seconds |
 | alert_11 | Label indicating the presence of a failure (alert 11) |
+
+
+The following table summarizes the names of the available algorithms scripts, to reproduce the results presented in the paper:
+
+| Algorithm | Hyperparameters | Batch run script | Single run script |
+|---|---|---|---|
+| LSTM | loss: F1, type: Unidirectional | run_all_LSTM_UnidirectionalF1.py | LSTM_arch52.py |
+| LSTM | loss: F1, type: Bidirectional | run_all_LSTM_BidirectionalF1.py | LSTM_archR1.py |
+| LSTM | loss: BCE, type: Unidirectional | run_all_LSTM_UnidirectionalBCE.py | LSTM_archBCEUnidirectional.py |
+| LSTM | loss: BCE, type: Bidirectional | run_all_LSTM_BidirectionalBCE.py | LSTM_archBCEBidirectional.py |
+| LR | regularization: L1 | run_all_LR.py | LR_liblinear.py |
+| LR | regularization: L2 | run_all_LR.py | LogisticRegression.py |
+| SVC | all | run_all_SVC.py | SVC.py |
+| RF | all | run_all_RF.py | RandomForest.py |
