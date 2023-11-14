@@ -20,6 +20,7 @@ The following table summarizes the meaning of each variable:
 
 Notice that the variable 'Evaporator Temperature Base [°C]' and 'Instant Power Consumtpion [W]' in the dataset are reported as 'Evaportator Temperature Base [°C]' and 'Instant Power Consumtpion [W]' due to typing errors.
 
+
 The following table summarizes the names of the available algorithms scripts, to reproduce the results presented in the paper:
 
 | Algorithm | Hyperparameters | Batch run script | Single run script |
