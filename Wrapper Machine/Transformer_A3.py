@@ -287,7 +287,6 @@ result_dict = {
 for model_name in models:
     print_output('------------------------------------------------------------------------')
     print_output('------------------------------------------------------------------------')
-    print_output(f'MODEL {model_name}')
     kfold = StratifiedKFold(n_splits=5, shuffle=False)
 
     X = X_machine
