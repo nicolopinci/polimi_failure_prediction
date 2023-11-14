@@ -9,8 +9,7 @@ This repository contains a nitrogen generators real data set, which can be read 
 | Nitrogen pressure [bar] | Pressure of the nitrogen inside the machine |
 | Oxygen over threshold | Flag if the oxygen concentration is under or over a specific threshold|
 
-The following table summarizes the names of the available algorithms scripts, to reproduce the results presented in the paper:
-
+The folders PW_* contains different splitting of the dataset based on the desidered prediction window (PW). Each folder contains the train, test and validation split by which the following algorithms are trained and tested:
 | Algorithm | Hyperparameters | Batch run script | Single run script |
 |---|---|---|---|
 | LSTM | loss: F1, type: Unidirectional | run_all_LSTM.py | LSTM.py |
