@@ -385,4 +385,4 @@ data = {
 df = pd.DataFrame(data)
 
 # Export the DataFrame to CSV
-df.to_csv("experiments/LSTM_" + folder + "_RW_" + str(RW_minutes) + "min.csv", index=False)
+df.to_csv("LSTM_" + folder + "_RW_" + str(RW_minutes) + "min.csv", index=False)
