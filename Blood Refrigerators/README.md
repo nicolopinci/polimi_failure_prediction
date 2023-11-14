@@ -17,6 +17,7 @@ The following table summarizes the meaning of each variable:
 | Machine cooling | Binary value to indicate if the refrigerator is in the status 'cooling' |
 | Machine defrost | Binary value to indicate if the refrigerator is in the status 'defrost' |
 | Machine pause | Binary value to indicate if the refrigerator is in the status 'pause'|
+| PW_X.h | Flag if in the prediction window with size X there is a fault|
 
 Notice that the variable 'Evaporator Temperature Base [°C]' and 'Instant Power Consumtpion [W]' in the dataset are reported as 'Evaportator Temperature Base [°C]' and 'Instant Power Consumtpion [W]' due to typing errors.
 
