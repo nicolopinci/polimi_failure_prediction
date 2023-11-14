@@ -19,17 +19,17 @@ The following table summarizes the meaning of each variable:
 | Machine pause | Binary value to indicate if the refrigerator is in the status 'pause'|
 | PW_X.h | Flag if in the prediction window with size X there is a fault|
 
-Notice that the variable 'Evaporator Temperature Base [°C]' and 'Instant Power Consumtpion [W]' in the dataset are reported as 'Evaportator Temperature Base [°C]' and 'Instant Power Consumtpion [W]' due to typing errors.
+Notice that the variable 'Evaporator Temperature Base [°C]' in the dataset is reported as 'Evaportator Temperature Base [°C]'.
 
 
 The following table summarizes the names of the available algorithms scripts, to reproduce the results presented in the paper:
 
-| Algorithm | Hyperparameters | Batch run script | Single run script |
-|---|---|---|---|
-| LSTM | loss: F1, type: Unidirectional | run_all_LSTM.py | LSTM.py |
-| ConvLSTM | loss: F1, type: Unidirectional | run_all_ConvLSTM.py | ConvLSTM.py |
-| Transformer | loss: F1, type: Unidirectional | run_all_Transformer.py | Transformer.py |
-| LR | regularization: L1, L2 | run_all_LR.py | LR.py |
-| SVM | all | run_all_SVM.py | SVM.py |
-| RF | all | run_all_RF.py | RF.py |
+| Algorithm | Batch run script | Single run script |
+|---|---|---|
+| LSTM | run_all_LSTM.py | LSTM.py |
+| ConvLSTM | run_all_ConvLSTM.py | ConvLSTM.py |
+| Transformer | run_all_Transformer.py | Transformer.py |
+| LR | run_all_LR.py | LR.py |
+| SVM | run_all_SVM.py | SVM.py |
+| RF | run_all_RF.py | RF.py |
 
