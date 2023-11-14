@@ -9,7 +9,7 @@ The following table summarizes the meaning of each variable:
 | Oxygen base concentration | Concentration of the oxygen inside the machine  |
 | Nitrogen pressure [bar] | Pressure of the nitrogen inside the machine |
 | Oxygen over threshold | Flag if the oxygen concentration is under or over a specific threshold|
-| PW_X.h | Flag if in the prediction window with size X there is a fault|  
+| PW_Xh | Flag if in the prediction window with size X there is a fault|  
 
 Notice that in the dataset, the variable 'Oxygen base concentration' is in Italian: 'Concentrazione ossigeno base'.
 
