@@ -36,3 +36,5 @@ The following table summarizes the names of the available algorithms scripts, to
 | LR | regularization: L2 | run_all_LR.py | LogisticRegression.py |
 | SVC | all | run_all_SVC.py | SVC.py |
 | RF | all | run_all_RF.py | RandomForest.py |
+| ConvLSTM | _different architectures_ | run_all_ConvLSTM_A<_x_>.py | ConvLSTM_A<_x_>.py |
+| Transformer | _different architectures_ | run_all_Transformer_A<_x_>.py | Transformer_A<_x_>.py |
