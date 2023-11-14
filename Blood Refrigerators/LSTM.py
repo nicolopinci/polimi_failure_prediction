@@ -209,16 +209,16 @@ class LSTMHyperModel(HyperModel):
 
     def build(self, hp):
         model = tf.keras.Sequential()
-        model.add(tf.keras.layers.Bidirectional(tf.compat.v1.keras.layers.CuDNNLSTM(hp.Int('units_1', min_value=32, max_value=512, step=32),
+        model.add(tf.keras.layers.Bidirectional(tf.compat.v1.keras.layers.CuDNNLSTM(hp.Int('units_1', min_value=32, max_value=128, step=32),
                                                                     return_sequences=True,
                                                                     kernel_regularizer=tf.keras.regularizers.L2(hp.Choice('l2_reg_1', values=[1e-4, 0.001, 0.01, 0.1]))),
                   input_shape=self.input_shape))
         model.add(tf.keras.layers.BatchNormalization())
-        model.add(tf.keras.layers.Bidirectional(tf.compat.v1.keras.layers.CuDNNLSTM(hp.Int('units_2', min_value=16, max_value=256, step=16),
+        model.add(tf.keras.layers.Bidirectional(tf.compat.v1.keras.layers.CuDNNLSTM(hp.Int('units_2', min_value=16, max_value=64, step=16),
                                                                     return_sequences=True,
                                                                     kernel_regularizer=tf.keras.regularizers.L2(hp.Choice('l2_reg_3', values=[1e-4, 0.001, 0.01, 0.1])))))
         model.add(tf.keras.layers.BatchNormalization())
-        model.add(tf.keras.layers.Bidirectional(tf.compat.v1.keras.layers.CuDNNLSTM(hp.Int('units_3', min_value=32, max_value=256, step=16),
+        model.add(tf.keras.layers.Bidirectional(tf.compat.v1.keras.layers.CuDNNLSTM(hp.Int('units_3', min_value=32, max_value=128, step=16),
                                                                     return_sequences=False,
                                                                     kernel_regularizer=tf.keras.regularizers.L2(hp.Choice('l3_reg_3', values=[1e-4, 0.001, 0.01, 0.1])))))
         model.add(tf.keras.layers.BatchNormalization())
@@ -242,7 +242,6 @@ class LSTMHyperModel(HyperModel):
         model.compile(loss="binary_crossentropy", optimizer=optimizer, metrics=[macro_f1_score])
 
         return model
-
 gpu_number = 0
 os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu_number)
 
@@ -267,9 +266,9 @@ objective = Objective("val_macro_f1_score", direction="max")
 tuner = BayesianOptimization(
      hypermodel=hypermodel,
     objective=objective,
-    max_trials=100,
-    directory='bo_tuning2_' + folder + "_" + str(RW_minutes),
-    project_name='lstm_tuning2'
+    max_trials=50,
+    directory='bo_tuning_' + folder + "_" + str(RW_minutes),
+    project_name='lstm_tuning'
 )
 
 early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', min_delta=0, patience=50, verbose=0, mode='min', restore_best_weights=True)
@@ -385,4 +384,4 @@ data = {
 df = pd.DataFrame(data)
 
 # Export the DataFrame to CSV
-df.to_csv("LSTM" + folder + "_RW_" + str(RW_minutes) + "min.csv", index=False)
+df.to_csv("LSTM_" + folder + "_RW_" + str(RW_minutes) + "min.csv", index=False)

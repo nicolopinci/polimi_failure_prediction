@@ -55,8 +55,6 @@ for window in split_into_windows(test_data, window_size, step):
     test_result.append((window_features, last_class_value))
 
 
-import random
-random.seed(42)
 
 # Separate the windows for each class
 class_0_windows = [window for window, last_class_value in result if last_class_value == 0]
@@ -161,10 +159,6 @@ test_labels = np.array(test_labels)
 import tensorflow as tf
 import tensorflow.keras.backend as K
 
-
-seed_value = 42
-np.random.seed(seed_value)
-tf.random.set_seed(seed_value)
 os.environ['TF_DETERMINISTIC_OPS'] = '1'
 
 from tensorflow.keras.layers import Dropout, BatchNormalization, Dense, LSTM
@@ -486,4 +480,4 @@ data = {
 df = pd.DataFrame(data)
 
 # Export the DataFrame to CSV
-df.to_csv("Transformer" + folder + "_RW_" + str(RW_minutes) + "min.csv", index=False)
+df.to_csv("Transformer_new_" + folder + "_RW_" + str(RW_minutes) + "min.csv", index=False)
