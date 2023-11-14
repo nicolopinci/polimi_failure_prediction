@@ -15,11 +15,11 @@ Notice that in the dataset, the variable 'Oxygen base concentration' is in Itali
 
 The following table summarizes the names of the available algorithms scripts, to reproduce the results presented in the paper:
 
-| Algorithm | Hyperparameters | Batch run script | Single run script |
-|---|---|---|---|
-| LSTM | loss: F1, type: Unidirectional | run_all_LSTM.py | LSTM.py |
-| ConvLSTM | loss: F1, type: Unidirectional | run_all_ConvLSTM.py | ConvLSTM.py |
-| Transformer | loss: F1, type: Unidirectional | run_all_Transformer.py | Transformer.py |
-| LR | regularization: L1, L2 | run_all_LR.py | LR.py |
-| SVM | all | run_all_SVM.py | SVM.py |
-| RF | all | run_all_RF.py | RF.py |
+| Algorithm | Batch run script | Single run script |
+|---|---|---|
+| LSTM  | run_all_LSTM.py | LSTM.py |
+| ConvLSTM  | run_all_ConvLSTM.py | ConvLSTM.py |
+| Transformer | run_all_Transformer.py | Transformer.py |
+| LR |  run_all_LR.py | LR.py |
+| SVM |  run_all_SVM.py | SVM.py |
+| RF | run_all_RF.py | RF.py |
