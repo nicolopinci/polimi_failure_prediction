@@ -18,7 +18,7 @@ The following table summarizes the meaning of each variable:
 | Machine defrost | Binary value to indicate if the refrigerator is in the status 'defrost' |
 | Machine pause | Binary value to indicate if the refrigerator is in the status 'pause'|
 
-The following table summarizes the names of the available algorithms scripts, to reproduce the results presented in the paper:
+The folders PW_* contains different splitting of the dataset based on the desidered prediction window (PW). Each folder contains the train, test and validation split by which the following algorithms are trained and tested: 
 
 | Algorithm | Hyperparameters | Batch run script | Single run script |
 |---|---|---|---|
@@ -28,3 +28,4 @@ The following table summarizes the names of the available algorithms scripts, to
 | LR | regularization: L1, L2 | run_all_LR.py | LR.py |
 | SVM | all | run_all_SVM.py | SVM.py |
 | RF | all | run_all_RF.py | RF.py |
+
