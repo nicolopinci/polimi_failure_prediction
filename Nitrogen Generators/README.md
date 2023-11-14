@@ -10,6 +10,8 @@ The following table summarizes the meaning of each variable:
 | Nitrogen pressure [bar] | Pressure of the nitrogen inside the machine |
 | Oxygen over threshold | Flag if the oxygen concentration is under or over a specific threshold|
 
+Notice that in the dataset, the variable 'Oxygen base concentration' is in Italian: 'Concentrazione ossigeno base'.
+
 The following table summarizes the names of the available algorithms scripts, to reproduce the results presented in the paper:
 
 | Algorithm | Hyperparameters | Batch run script | Single run script |
